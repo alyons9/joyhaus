@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheets" href="/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss"/>
+  <!-- endbuild -->
+</head>
+<body ng-app="joyhausApp">
+  <!--[if lte IE 8]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <!-- <header class="header">
+
+</header> -->
+
+<div class="wrapper">
+
+  <div class="front-page">
+    <div class="panel">
+      <div class="panel-row">
+        <div class="picture-panel">
+          <img src="/images/pink_dress_jh.jpg"/>
+        </div>
+        <div class="picture-panel">
+          <img src="/images/red_summer_dress.jpg"/>
+        </div>
+        <div class="picture-panel">
+          <img src="/images/romper_jh.jpg"/>
+        </div>
+        <div class="picture-panel">
+          <img src="/images/chic_design_jh.jpg"/>
+        </div>
+      </div>
+      <img class="logo" src="/images/jh_logo_2.png"/>
+      <!-- <h3>Welcome To The Joy Haus</h3>
+      <p>Generational Fashion Design</p> -->
+    </div>
+  </div>
+
+  <div class="about-panel">
+    <img src="/images/mini_logo.png"/>
+    <h3>Find Out More About The Joy Haus</h3>
+    <h4>Fashion Haus- (n) an establishment in which
+      fashionable clothes are designed, made, and sold.</h4>
+      <p>We invite you to the specialized experience within the doors of The Joy Haus. Whether “I Do” is in sight, you’re going out for your flirty forties, or you’re ready to make your house a home, we are here to celebrate with you! Our main goal is for you to have a custom experience enjoying original designs, because when you look good, you feel good.</p>
+      <p>Welcome to The Joy Haus!</p>
+      <div class="outer-wrapper">
+        <div class="nav-wrapper">
+          <img src="/images/bottoms/black_tutu.jpg" alt="..." class="img-circle pic-panel"/>
+          <p>This is some text hopefully at the bottom.</p>
+        </div>
+        <div class="nav-wrapper">
+          <img src="/images/bottoms/black_tutu.jpg" alt="..." class="img-circle pic-panel"/>
+          <p>This is some text hopefully at the bottom.</p>
+        </div>
+        <div class="nav-wrapper">
+          <img src="/images/bottoms/black_tutu.jpg" alt="..." class="img-circle pic-panel"/>
+          <p>This is some text hopefully at the bottom.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="invitation-panel">
+    <h3>Welcome To The Joy Haus</h3>
+    <p>The most elegant dresses designed for that special occasion.</p>
+    <p></p>
+  </div> -->
+
+  <div class="aboutus-panel">
+    <div>
+      <h3>Meet The Team</h3>
+      <img src="/images/meet-the-team-1.jpg"/>
+    </div>
+  </div>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script>
+  $(document).ready(function (){
+    var scrollDownCount = 0;
+    var scrollUpCount = 0;
+    $('.front-page').bind('mousewheel', function(e) {
+      console.log("ScrollCount: " + scrollDownCount);
+      if(scrollDownCount < 1){
+        // var delta = Math.max(-1, Math.min(1, e.originalEvent.wheelDelta));
+        // console.log(delta);
+        if(e.originalEvent.wheelDelta / 120 < 0){
+          console.log('mouse scroll direction: down: ' + e.originalEvent.wheelDelta);
+          $('html, body').animate({
+            scrollTop: $(".about-panel").offset().top
+          }, 2000);
+          scrollDownCount = 1;
+          scrollUpCount = 0;
+        }
+      }
+    });
+
+    $('.about-panel').bind('mousewheel', function(e){
+      if(scrollUpCount<1){
+        if(e.originalEvent.wheelDelta / 120 > 0){
+          console.log("ScrollUpCount: " + scrollUpCount);
+          console.log('mouse scroll direction: up: ' + e.originalEvent.wheelDelta);
+          $('html, body').animate({
+            scrollTop: $("html").offset().top
+          }, 2000);
+          scrollUpCount = 1;
+          scrollDownCount = 0;
+        }
+      }
+    })
+  });
+  </script>
+  <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,136 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+header{
+  background-color: #86858A;
+  width: 100%;
+  height: 110px;
+  bottom: 0px;
+  opacity: .7;
+  position:fixed;
+}
+
+body {
+  // background-image: url("/images/joyhaus.jpg");
+  // background-color: #FFFFFF;
+  background-color: #927BC3;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  height:100%;
+  width:100%;
+}
+
+h3{
+  color: #FFFFFF;
+  font-weight: lighter;
+}
+p{
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.wrapper{
+  text-align: center;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.front-page{
+  margin-bottom: 200px;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+}
+
+.opaque {
+  opacity: .5;
+  background-color: red;
+
+}
+
+div.panel{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+  // border: 5px solid blue;
+  background-color: black;
+  // margin: 0 auto;
+    .picture-panel {
+      width: 25%;
+      height: 100%;
+      display: inline-block;
+      // border: 5px solid red;
+      float: left;
+      margin: 0 auto;
+      vertical-align: top;
+      img{
+        width: 100%;
+        position: relative;
+      }
+    }
+}
+
+div.invitation-panel {
+  background-color: #848084;
+  text-align:center;
+  h3{
+    color: #FFFFFF;
+    font-weight: lighter;
+  }
+  p{
+    color: #FFFFFF;
+    margin: 0;
+  }
+}
+
+div.about-panel{
+  margin-bottom: 100px;
+  h4{
+    color: #ABA8A8;
+  }
+  img.pic-panel {
+    height: 300px;
+    width: 200px;
+    margin-top: 80px;
+  }
+}
+
+.outer-wrapper {
+  // float: left;
+  height: 500px;
+  margin-bottom: 50px;
+  // height: 400px;
+  position: relative;
+
+}
+
+.nav-wrapper {
+  float: left;
+  width: 390px;
+}
+
+
+img:nth-of-type(2){
+  margin-right: 170px;
+}
+
+img:nth-of-type(4){
+  margin-left: 170px;
+}
+
+div.aboutus-panel {
+  // background-color: #848084;
+  background-color: black;
+  width: 100%;
+  height: 750px;
+  margin: 0;
+  h3{
+    margin: 0;
+  }
+}
