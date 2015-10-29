@@ -13,6 +13,7 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheets" href="/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss"/>
+  <link rel="stylesheets" href="/bower_components/font-awesome/font-awesome.css"/>
   <!-- endbuild -->
 </head>
 <body ng-app="joyhausApp">
@@ -25,8 +26,12 @@
 
 </header> -->
 
-<div class="wrapper">
 
+
+<div class="wrapper">
+  <div class="header">
+    <img class="logo" src="/images/jh_logo_2.png"/>
+  </div>
   <div class="front-page">
     <div class="panel">
       <div class="panel-row">
@@ -59,15 +64,15 @@
       <div class="outer-wrapper">
         <div class="nav-wrapper">
           <img src="/images/bottoms/black_tutu.jpg" alt="..." class="img-circle pic-panel"/>
-          <p>This is some text hopefully at the bottom.</p>
+          <h3>Casual Dresses</h3>
         </div>
         <div class="nav-wrapper">
           <img src="/images/bottoms/black_tutu.jpg" alt="..." class="img-circle pic-panel"/>
-          <p>This is some text hopefully at the bottom.</p>
+          <h3>Wedding Attire</h3>
         </div>
         <div class="nav-wrapper">
           <img src="/images/bottoms/black_tutu.jpg" alt="..." class="img-circle pic-panel"/>
-          <p>This is some text hopefully at the bottom.</p>
+          <h3>This is some text hopefully at the bottom.</h3>
         </div>
       </div>
     </div>
@@ -78,24 +83,28 @@
     <p></p>
   </div> -->
 
-  <div class="aboutus-panel">
+  <!-- <div class="aboutus-panel">
     <div>
       <h3>Meet The Team</h3>
       <img src="/images/meet-the-team-1.jpg"/>
     </div>
+  </div> -->
+
+  <div class="footer">
+      <a href="https://www.facebook.com/thejoyhaus/"><i class="fa fa-facebook-square fa-3x" style="color: white;"></i></a>
   </div>
 
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-cookies/angular-cookies.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
